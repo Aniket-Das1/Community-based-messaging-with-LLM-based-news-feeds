@@ -1,0 +1,299 @@
+/* General App Styles */
+.App {
+  text-align: center;
+  background: url('C:\Users\DELL\Desktop\DOCMY\PROJECTS\message-app\client\src\1_zBkvNO-k6jP8SG9ukLjQ-w.gif') no-repeat center center fixed; 
+  background-size: cover;  /* Makes the image cover the entire background */
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+   /* Ensure the background covers the full viewport */
+  background-position: center; /* Center the background */
+  background-attachment: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+/* Logout Button */
+.logout-button {
+  position: absolute;      /* Absolute positioning relative to .App */
+  bottom: 20px;            /* 20px from the bottom */
+  left: 20px;              /* 20px from the left */
+  background-color: #d9534f; /* Red background for logout */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background-color: #c9302c; /* Darker red on hover */
+}
+
+/* Logo (if any) */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #5d696c;
+}
+
+/* Keyframe for spinning logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Heading styles */
+h2 {
+  color: rgb(241, 241, 250);
+}
+
+/* Chat Box (Messages Section) */
+.messages-container {
+  background-color: #474545;  /* Dark background for messages */
+  border: 2px solid white;   /* White border around the message box */
+  border-radius: 8px;        /* Rounded corners */
+  padding: 16px;
+  width: 45%;                /* Make messages section take up 45% of the screen width */
+  max-width: 500px;          /* Limit the width */
+  margin-top: 20px;
+  overflow-y: auto;          /* Scroll if content overflows */
+  max-height: 400px;         /* Fixed height with scrolling */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  /* Subtle shadow */
+  color: white;
+  font-size: 16px;
+}
+
+/* Individual Message */
+.messages-container div {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.messages-container div:last-child {
+  border-bottom: none;
+}
+/* Container for textarea and button */
+.message-input-container {
+  position: fixed;        /* Position relative to .App */
+  bottom: 25px;              /* 20px from the bottom */
+  left: 400px;                /* 20px from the left */
+  display: flex;             /* Flexbox for horizontal alignment */
+  align-items: center;       /* Center items vertically */
+  gap: 10px;                 /* Space between textarea and button */
+  width: 90%;                /* Responsive width */
+  max-width: 1000px;  
+       /* Limit the maximum width */
+}
+
+/* Textarea Styles */
+.jd{left:30px}
+
+/* Send Button */
+button {
+  bottom: 30px;              /* 20px from the bottom */
+  left: 25px; 
+  background-color: #4b5659;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+  white-space: nowrap;        /* Prevent text wrapping */
+}
+
+button:hover {
+  background-color: #c6d4dc;
+}
+
+/* Input and Button Styling */
+textarea {
+  width: 45%;                /* Make the text area take up 45% of the screen width */
+  max-width: 400px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  background-color: #333;
+  color: white;
+  margin-top: 20px;
+}
+/* Focus Effect */
+/* Stories Container */
+.stories-container {
+  padding: 20px;
+  background-color: rgba(0,0,0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: black;  /* Hide overflow to focus on one story */
+}
+
+/* Stories Wrapper (Horizontal Scroll) */
+.stories-wrapper {
+  display: flex;
+  gap: 0; 
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;  /* Snap to each story */
+  scroll-behavior: smooth;
+  width: 100%; 
+  max-width: 500px; 
+  border: black; /* Restrict max width */
+}
+
+
+.story {
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  min-width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);  /* Added for visibility */
+}
+/* Hover Effect for Stories */
+.story:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Story Image/Video Styling */
+.story img,
+.story video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  background-color: #000;
+}
+
+/* Swipeable Navigation (Optional) */
+.stories-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for cleaner look */
+}
+
+@media (max-width: 768px) {
+  .story {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story {
+    height: 200px;
+  }
+}
+
+
+textarea:focus {
+  outline: none;
+  border-color: #61dafb;     /* Blue border on focus */
+  background-color: #444;    /* Slightly lighter background on focus */
+}
+
+button {
+  background-color: #80898c;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:  0.3s;
+}
+.outlined-text {
+  color: rgb(167, 72, 72);
+  font-size: 48px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px rgb(208, 201, 201);
+
+}
+button:hover {
+  background-color: #646a6d;
+}
+
+/* Login & Register Forms */
+form {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 300px;
+  border: 1px solid white;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+/* Error Messages */
+.error {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+
+.layout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  margin-top: 40px;
+}
+
